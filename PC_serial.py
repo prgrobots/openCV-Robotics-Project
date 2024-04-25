@@ -2,13 +2,12 @@
 import serial
 
 # Configure the serial port
-ser = serial.Serial('COM12', 9600)  # Replace 'COM3' with the appropriate port
+ser = serial.Serial('COM15', 9600)  # Replace 'COM3' with the appropriate port
 
 while True:
     # Read data from the serial port
     data = ser.readline().decode('utf-8').strip()
-
-    # Check if data was received
+    print(data)    # Check if data was received
     if data:
         # Split the data into x and y values
         x, y = data.split(',')
